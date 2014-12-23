@@ -16,17 +16,8 @@ set backspace=indent,eol,start
 " Set the text encoding to handle utf-8
 set encoding=utf-8
 
-"let g:user_emmet_install_global = 0	" Emmet plugin setup
-"autocmd FileType html,css,php EmmetInstall
-" Treat <li> and <p> tags like the block tags they are
-"let g:html_indent_tags = 'li\|p'
-
-" Ariline / Color config
+" Color config
 set t_Co=256
-let g:airline_powerline_fonts = 1
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_theme="base16"
 colorscheme base16-twilight
 
 " Show tabline for buffers when only one tab is being used
