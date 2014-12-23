@@ -1,15 +1,6 @@
 " Use Vim settings, not compatible with legacy Vi
 set nocompatible
 
-" Autoindent plugin setup
-filetype off
-filetype plugin indent on
-" Stopped doing this in lieu of separate files for each language:
-"
-"autocmd FileType html setlocal shiftwidth=2 tabstop=2
-"autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
-"autocmd FileType pde, java setlocal shiftwidth=4 softtabstop=4
-
 " Nice, compact default tab settings
 set tabstop=2
 set shiftwidth=2
