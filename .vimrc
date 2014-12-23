@@ -18,17 +18,7 @@ set encoding=utf-8
 
 " Color config
 set t_Co=256
-colorscheme base16-twilight
-
-" Show tabline for buffers when only one tab is being used
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-
-let g:airline#extensions#whitespace#trailing_format = 'trail[%s]'
-let g:airline#extensions#whitespace#mixed_indent_format = 'mixed[%s]'
-let g:airline#extensions#whitespace#symbol = '•'
-let g:airline#extensions#whitespace#mixed_indent_algo = 1
+colorscheme base16-monokai
 
 set laststatus=2
 set ttimeoutlen=0
