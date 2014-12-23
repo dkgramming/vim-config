@@ -1,31 +1,6 @@
 " Use Vim settings, not compatible with legacy Vi
 set nocompatible
 
-
-" Vundle
-" set the runtime path to include Vundle and initialize
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" All the plugins
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim-airline'
-Plugin 'sophacles/vim-processing'
-Plugin 'chriskempson/base16-vim'
-Plugin 'slim-template/vim-slim'
-Plugin 'cakebaker/scss-syntax.vim'
-"Plugin 'bling/vim-bufferline'
-Plugin 'airblade/vim-gitgutter'
-"Plugin 'Valloric/YouCompleteMe'
-" Am also using Conque Term, installed manually
-
-" All of your Plugins must be added before the following line
-call vundle#end()
-
-
-
 " Autoindent plugin setup
 filetype off
 filetype plugin indent on
