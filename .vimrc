@@ -1,6 +1,9 @@
 " Use Vim settings, not compatible with legacy Vi
 set nocompatible
 
+" Activate Pathogen for plugins
+execute pathogen#infect()
+
 " Nice, compact default tab settings
 set tabstop=2
 set shiftwidth=2
@@ -16,8 +19,8 @@ set backspace=indent,eol,start
 set encoding=utf-8
 
 " Color config
-set t_Co=256
-" colorscheme base16-monokai
+let base16colorspace=256
+colorscheme base16-monokai
 
 set laststatus=2
 set ttimeoutlen=0
