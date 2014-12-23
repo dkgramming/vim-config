@@ -37,26 +37,10 @@ set ruler           " Tells you the coords of the cursor in the status line
 set wildmenu	    	" Tab complete vim commands
 set wildmode=longest,list,full
 set laststatus=2	  " Always show status line
-let g:loaded_matchparen=1
-
-" In many terminal emulators the mouse works just fine, so I enable it.
-"if has('mouse')
-  "set mouse=a
-"endif
 
 " Show where my cursor is with a horizontal line
 set cursorline
-" But only in active splits, stopped doing this when I added airline
-"augroup BgHighlight
-	"autocmd!
-	"autocmd WinEnter * set cul
-	"autocmd WinLeave * set nocul
-"augroup END
 
-" Search/Regex settings
-nnoremap <leader><space> :noh<cr>
-nnoremap / /\v
-vnoremap / /\v
 "set ignorecase
 "set smartcase
 set gdefault    " Regex global by default
@@ -131,15 +115,6 @@ map <leader>. :bn<CR>
 inoremap kj <Esc>
 
 map <leader>v :bp<bar>sp<bar>bn<bar>bd<CR>
-
-" Vim Processing Java runner
-augroup pde
-	autocmd!
-	autocmd BufNewFile,BufRead *.pde setlocal filetype=java
-	autocmd Filetype java :command! Pj :!processing-java --run --sketch=$(pwd) --output=$(pwd)/tmp --force
-	autocmd Filetype java :command! Pjf :!processing-java --present --sketch=$(pwd) --output=$(pwd)/tmp --force
-	autocmd Filetype java :command! Pjb :!processing-java --present --sketch=$(pwd) --output=$(pwd)/tmp --force
-augroup END
 
 " Why is this not a built-in Vim script function?!
 function! s:get_visual_selection()
