@@ -11,19 +11,15 @@ set breakindent
 " Let me know when my lines are too damn long
 set colorcolumn=80
 
-
 " Backspace anything in insert mode
 set backspace=indent,eol,start
 " Set the text encoding to handle utf-8
 set encoding=utf-8
 
-
 "let g:user_emmet_install_global = 0	" Emmet plugin setup
 "autocmd FileType html,css,php EmmetInstall
 " Treat <li> and <p> tags like the block tags they are
 "let g:html_indent_tags = 'li\|p'
-
-
 
 " Ariline / Color config
 set t_Co=256
@@ -47,8 +43,6 @@ set laststatus=2
 set ttimeoutlen=0
 set background=dark
 
-
-
 " Interface settings
 syntax on		        " Syntax highlighting
 set relativenumber	" Line numbers relative to cursor
@@ -64,14 +58,10 @@ set wildmode=longest,list,full
 set laststatus=2	  " Always show status line
 let g:loaded_matchparen=1
 
-
-
 " In many terminal emulators the mouse works just fine, so I enable it.
 "if has('mouse')
   "set mouse=a
 "endif
-
-
 
 " Show where my cursor is with a horizontal line
 set cursorline
@@ -81,8 +71,6 @@ set cursorline
 	"autocmd WinEnter * set cul
 	"autocmd WinLeave * set nocul
 "augroup END
-
-
 
 " Search/Regex settings
 nnoremap <leader><space> :noh<cr>
@@ -96,8 +84,6 @@ set showmatch   " Visually flash matching brackets when typing
 set hlsearch    " Highlight all search matches not just the current one
 set spell       " Spell checker for Vim!
 
-
-
 " File management
 " set history=100
 set undolevels=1000
@@ -108,18 +94,13 @@ set directory=~/.vim/tmp
 set undodir=~/.vim/tmp
 set noswapfile
 
-
-
 " Copy/Paste settings
 set copyindent
 "set pastetoggle=<f2>
 
-
-
 " Misc. Settings
 set ttyfast
 set modelines=0
-
 
 " Open last Vim command
 nnoremap <Right> :<Up>
@@ -133,8 +114,6 @@ nnoremap <Down> ddp
 " Bubble multiple lines
 vnoremap <Up> xkP`[V`]
 vnoremap <Down> xp`[V`]
-
-
 
 " Convenience remappings
 " Jump around brackets with tab as well
@@ -170,10 +149,7 @@ map <leader>. :bn<CR>
 
 inoremap kj <Esc>
 
-
 map <leader>v :bp<bar>sp<bar>bn<bar>bd<CR>
-
-
 
 " Vim Processing Java runner
 augroup pde
@@ -184,7 +160,6 @@ augroup pde
 	autocmd Filetype java :command! Pjb :!processing-java --present --sketch=$(pwd) --output=$(pwd)/tmp --force
 augroup END
 
-
 " Why is this not a built-in Vim script function?!
 function! s:get_visual_selection()
   let [lnum1, col1] = getpos("'<")[1:2]
@@ -194,8 +169,6 @@ function! s:get_visual_selection()
   let lines[0] = lines[0][col1 - 1:]
   return join(lines, "\n")
 endfunction
-
-
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
