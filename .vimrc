@@ -6,9 +6,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set autoindent
-" set nowrap
-set breakindent
 " Let me know when my lines are too damn long
+" set nowrap
 set colorcolumn=80
 
 " Backspace anything in insert mode
@@ -18,7 +17,7 @@ set encoding=utf-8
 
 " Color config
 set t_Co=256
-colorscheme base16-monokai
+" colorscheme base16-monokai
 
 set laststatus=2
 set ttimeoutlen=0
@@ -67,66 +66,7 @@ set copyindent
 set ttyfast
 set modelines=0
 
-" Open last Vim command
-nnoremap <Right> :<Up>
-" Open last search result
-nnoremap <Left> /\v<Up>
-
-" Bubble single lines
-nnoremap <Up> ddkP
-nnoremap <Down> ddp
-
-" Bubble multiple lines
-vnoremap <Up> xkP`[V`]
-vnoremap <Down> xp`[V`]
-
-" Convenience remappings
-" Jump around brackets with tab as well
-nnoremap <tab> %
-vnoremap <tab> %
-" Move screen lines not actual ones
-nnoremap j gj
-nnoremap k gk
-
-" Set my leader to space except for x,i modes
-map <Space> <Leader>
-noremap <Leader>x i
-
-" ; for faster commands
-"nnoremap ; :
-" Jump to new split with <space>w
-nnoremap <leader>w <C-w>v<C-w>l
-nnoremap <leader>e <C-w>s<C-w>j
-
-" Move around splits with ctrl movement keys
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-" Start zsh, use zv to source a clean zshrc for vim
-nnoremap <leader>b :ConqueTerm zsh <CR>
-map <leader>n :38sp<CR><C-j><leader>b
-
-" Leader , or . (think < >) for previous/next buffer
-map <leader>, :bp<CR>
-map <leader>. :bn<CR>
-
-inoremap kj <Esc>
-
-map <leader>v :bp<bar>sp<bar>bn<bar>bd<CR>
-
-" Why is this not a built-in Vim script function?!
-function! s:get_visual_selection()
-  let [lnum1, col1] = getpos("'<")[1:2]
-  let [lnum2, col2] = getpos("'>")[1:2]
-  let lines = getline(lnum1, lnum2)
-  let lines[-1] = lines[-1][: col2 - (&selection == 'inclusive' ? 1 : 2)]
-  let lines[0] = lines[0][col1 - 1:]
-  return join(lines, "\n")
-endfunction
-
-" When editing a file, always jump to the last known cursor position.
+"" When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
 " (happens when dropping a file on gvim).
 " Also don't do it when the mark is in the first line, that is the default
